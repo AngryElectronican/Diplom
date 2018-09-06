@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<div class="wrapper">
+	<header class="header">
+        <strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia enim eius, facere expedita voluptates suscipit quaerat aliquam amet vitae iste doloremque similique id eum excepturi a reprehenderit soluta exercitationem saepe!</strong> 
+    </header><!-- .header-->
+
+	<main class="content">
+        <strong>Content:</strong> 
+        <form action="." method="post" id="data_form">
+            {% csrf_token %}
+            Sending data: <input type="text" name="data"><br>
+            Id: <input type="text" name="ID"><br>
+          </form>
+        <button type="submit" form ="data_form" >Send data to buffer</button>
+        <p>{{inc}}</p>
+    </main><!-- .content -->
+
+</div><!-- .wrapper -->
+
+<footer class="footer">
+    <strong>Footer:</strong> 
+</footer><!-- .footer -->
+
+</body>
+</html>
