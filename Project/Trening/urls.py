@@ -4,5 +4,5 @@ from Trening import views
 
 urlpatterns = [
     url(r'^$',views.basic_view,name="base"),
-    url(r'^request$',views.Request_Handler,name="Request_handler"),
+    url(r'^receive_request$',views.Request_Handler,name="Request_handler"),
 ]
